@@ -5,9 +5,6 @@
         projectBoard: {{{projectBoard}}},
         tasks: {{{tasks}}},
         users: {{{users}}},
-        tasksInProgress: [],
-        tasksAvailable: [],
-        tasksCompleted: [],
 
     }
 </script>
@@ -20,54 +17,7 @@
 
 
 
-{{!-- <div class="body-contents">
-    <div class="topNav">
-        <a class ="navButton" href="/projectboards">Manage Projects</a>
-    </div>
-    <div class="projectBoard">
-        <div class="header">{{projectBoard.name}}</div>
-        <div class= "projectContents">
-                <div class ="listCard">
-                    <div class="listHeader">To Do</div>
-                    <div class="taskContainer" id="container">
-                        {{#each this.tasks}}
-                            <div class="taskCard" draggable="true">
-                                <div class="taskHeader">{{this.name}}</div>
-                            </div>
-                        {{/each}}
-                        <div id="addTask" class="taskCard">
-                            <form action='/addTask/{{projectBoard.id}}' method="POST">
-                                <label> Name : </label>
-                                <input name="name" type="text" placeholder="Task Description" required> <br>
-                            </form>
-                        </div>
-                    </div>
-                </div>
-                <div class ="listCard">
-                    <div class="listHeader">In Progress</div>
-                    <div class="taskContainer" id="container">
-                            <div class="taskCard">
-                                <div class="taskHeader">{{this.name}}</div>
-                            </div>
-                        <div id="addTask" class="taskCard">
 
-                        </div>
-                    </div>
-                </div>
-                <div class ="listCard">
-                    <div class="listHeader">Done</div>
-                    <div class="taskContainer" id="container">
-                            <div class="taskCard">
-                                <div class="taskHeader">{{this.name}}</div>
-                            </div>
-                        <div id="addTask" class="taskCard">
-
-                        </div>
-                    </div>
-                </div>
-        </div>
-    </div>
-</div> --}}
 
 
 

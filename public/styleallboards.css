@@ -20,15 +20,25 @@
 }
 .listHeader{
     font-size: 20px;
-    padding: 5px;
+    display: flex;
+    align-self: center;
+    flex-direction: row;
+    padding: 10px;
+    margin: 4px;
 }
+
+.taskContainer {
+    height: 900px;
+}
+
 .projectBoard {
     background-color: whitesmoke;
     border-radius: 30px;
     display: flex;
     flex-direction: column;
-    margin: 40px;
-    padding: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+    height: 900px;
 }
 .contents {
     font-size: large;
@@ -43,7 +53,6 @@
   }
 .header {
     font-size: 30px;
-    padding-left: 30px;
     text-align: center;
 }
 .projectBoardCard {
@@ -69,16 +78,18 @@
 }
 .listCard {
     padding: 20px;
+    margin-bottom: 10px;
     background-color: rgb(255, 255, 255) ;
     border-radius: 30px;
-    margin: 30px;
+    margin-left: 30px;
+    margin-right: 30px;
     border: 4px;
     border-color: rgb(0, 0, 0);
     text-align: center;
     display: flex;
     flex-direction: column;
     width: 500px;
-    height: 600px;
+    height: 700px;
     transition: 0.5s;
 }
 .projectContents {
@@ -135,6 +146,7 @@
 .navButton {
     float: left;
     text-align: middle;
+    align-self: center;
     justify-self: flex-start;
     padding: 10px 32px;
     margin: 4px;
@@ -198,18 +210,92 @@
     margin: 14px;
     width: 35%;
 }
-.taskcard {
+.taskHeader {
+    display: flex;
+    align-self: flex-start;
+}
+
+
+.taskCardContainerNormal {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(230, 230, 230);
+    border-radius: 20px;
+    margin:10px;
+    border-color:  rgb(230, 230, 230);
+    border-width: 2px;
+    border-style: solid;
+}
+
+.taskCardContainerImportant {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: orange;
+    border-radius: 20px;
+    margin:10px;
+    border-color:  rgb(230, 230, 230);
+    border-width: 2px;
+    border-style: solid;
+}
+
+.taskCardContainerUrgent {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: red;
+    border-radius: 20px;
+    margin:10px;
+    border-color:  rgb(230, 230, 230);
+    border-width: 2px;
+    border-style: solid;
+}
+
+.taskCardNormal {
     z-index: 6;
     background-color: rgb(230, 230, 230);
-    padding: 10px;
+    padding: 30px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    min-width: 275px;
     border-radius: 20px;
-    margin: 20px;
-    margin-bottom: 10px;
+    margin: 4px;
+    
 }
-.taskcard:hover {
-    padding: 15px;
-    margin-top: 10px;
-    margin-bottom: 0px;
+
+.taskCardImportant {
+    z-index: 6;
+    background-color:orange;
+    padding: 30px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    min-width: 275px;
+    border-radius: 20px;
+    margin: 4px;
+    
+}
+
+.taskCardUrgent {
+    z-index: 6;
+    color: white;
+    background-color: red;
+    padding: 30px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    min-width: 275px;
+    border-radius: 20px;
+    margin: 4px;
+    
+}
+    
+.taskCardContainer:hover {
+    border-color: rgb(190, 213, 255);
+    border-width: 2px;
+    border-style: solid;
 }
 .userTaskList{
     display: flex;
@@ -261,7 +347,6 @@
     padding: 5px;
     align-items: center;
     margin: 5px;
-    background-color: lightgrey;
     border-radius: 10px;
 }
 @keyframes fadeIn {
@@ -283,4 +368,170 @@
     margin: 40px;
     padding: 20px;
     line-height: 2.5em;
+}
+.arrow {
+    border: solid black;
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+    padding: 4px;
+  }
+  
+  .right {
+    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+  }
+  
+  .left {
+    transform: rotate(135deg);
+    -webkit-transform: rotate(135deg);
+  }
+  
+  .up {
+    transform: rotate(-135deg);
+    -webkit-transform: rotate(-135deg);
+  }
+  
+  .down {
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+  }
+
+  .arrowContainer {
+    /* display: flex; 
+    display: inline-block;
+    flex-direction: row; */
+  }
+
+  .form-style-1 {
+    margin:10px auto;
+    max-width: 400px;
+    padding: 20px 12px 10px 20px;
+    font: 25px "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+  }
+  .form-style-1 li {
+    padding: 0;
+    display: block;
+    list-style: none;
+    margin: 10px 7px 0 0;
+  }
+  .form-style-1 label{
+    margin:0 0 3px 0;
+    padding:0px;
+    display:block;
+    font-weight: bold;
+  }
+  .form-style-1 input[type=text], 
+  .form-style-1 input[type=date],
+  .form-style-1 input[type=datetime],
+  .form-style-1 input[type=number],
+  .form-style-1 input[type=search],
+  .form-style-1 input[type=time],
+  .form-style-1 input[type=url],
+  .form-style-1 input[type=email],
+  textarea, 
+  select{
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    border:2px solid #BEBEBE;
+    padding: 7px;
+    margin:4px;
+    -webkit-transition: all 0.30s ease-in-out;
+    -moz-transition: all 0.10s ease-in-out;
+    -ms-transition: all 0.30s ease-in-out;
+    -o-transition: all 0.30s ease-in-out;
+    outline: none;	
+  }
+  .form-style-1 input[type=text]:focus, 
+  .form-style-1 input[type=date]:focus,
+  .form-style-1 input[type=datetime]:focus,
+  .form-style-1 input[type=number]:focus,
+  .form-style-1 input[type=search]:focus,
+  .form-style-1 input[type=time]:focus,
+  .form-style-1 input[type=url]:focus,
+  .form-style-1 input[type=email]:focus,
+  .form-style-1 textarea:focus, 
+  .form-style-1 select:focus{
+    -moz-box-shadow: 0 0 8px #48a06a;
+    -webkit-box-shadow: 0 0 8px #48a06a;
+    box-shadow: 0 0 8px #48a06a;
+    border: 1px solid #48a06a;
+    
+  }
+  .form-style-1 .field-divided{
+    width: 100%;
+  }
+
+  .form-style-1 .field-long{
+    width: 100%;
+  }
+  .form-style-1 .field-select{
+    width: 100%;
+  }
+  .form-style-1 .field-textarea{
+    height: 100px;
+  }
+  .button{
+    display:inline-block;
+    padding:10px 40px;
+    margin-right: 5px;
+    margin-left: 5px;
+    align-self: center;
+    text-decoration:none;
+    font-family:'Roboto',sans-serif;
+    font-weight:300;
+    color:#FFFFFF;
+    text-align:center;
+    transition: all 0.2s;
+    font-size: 20px;
+    background-color: rgb(168, 168, 168);
+    outline:none;
+    border: none;
+    opacity: 100%;
+    cursor:pointer;
+    border-radius: 5px;
+    }
+  .button:hover{
+      background-color: brown;
+  }
+  .form-style-1 .required{
+    color:red;
+  }
+
+  .statusContainer {
+    align-self: center;
+    padding-left: 24vw;
+    display: flex;
+    flex-direction: row;
+}
+
+.statusAvailable {
+    background-color: rgb(230, 230, 230);
+    text-align: center;
+    font-size: 20px;
+    width: 120px;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 20px;
+}
+.statusInProgress {
+    background-color: orange;
+    text-align: center;
+    font-size: 20px;
+    width: 120px;
+    margin: 10px;
+    border-radius: 20px;
+    padding: 10px;
+
+}
+.statusUrgent {
+    background-color: red;
+    text-align: center;
+    font-size: 20px;
+    padding: 10px;
+    color: white;
+    margin: 10px;
+    border-radius: 20px;
+    width: 120px;
+
 }

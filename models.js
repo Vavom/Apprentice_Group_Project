@@ -28,7 +28,10 @@ ProjectBoard.init({
 
 Task.init({
     name: DataTypes.STRING,
-    status: DataTypes.STRING
+    status: DataTypes.STRING,
+    urgency: DataTypes.STRING,
+    description: DataTypes.STRING,
+    showDetails: DataTypes.STRING
 }, {sequelize})
 
 
